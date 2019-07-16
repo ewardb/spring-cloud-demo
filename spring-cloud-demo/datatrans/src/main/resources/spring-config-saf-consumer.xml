@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsf="http://jsf.jd.com/schema/jsf" xmlns:saf="http://code.360buy.com/schema/saf" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd   http://code.360buy.com/schema/saf http://code.360buy.com/schema/saf/saf.xsd http://jsf.jd.com/schema/jsf http://jsf.jd.com/schema/jsf/jsf.xsd" default-lazy-init="false" default-autowire="byName">
+  <!--<jsf:registry id="jsfRegistry" protocol="jsfRegistry" index="${jsf.index}"/>-->
+  <!--&lt;!&ndash;卖场中心&ndash;&gt;-->
+  <!--<jsf:consumer id="mallBannerCenterService" retries="1"-->
+                <!--interface="com.jd.ecc.b2b.mall.center.service.client.MallBannerCenterService"-->
+                <!--protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}"-->
+                <!--lazy="true" check="false"-->
+                <!--alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <jsf:consumer id="orderMiddlewareJSFService"
+                interface="com.jd.ioms.jsf.export.OrderMiddlewareJSFService"
+                protocol="jsf" alias="ioms-test" connectTimeout="1000" timeout="5000">
+  </jsf:consumer>
+  <!--<jsf:consumer id="mallInfoCenterService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.MallInfoCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="mallTDKCenterService" retries="-1" interface="com.jd.ecc.b2b.mall.center.service.client.MallTDKCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="mallRecommendCenterService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.MallRecommendCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="mallRecommendAttrCenterService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.MallRecommendAttrCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="mallNoticeCenterService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.MallNoticeCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="mallAdvertiseCenterService" retries="-1" interface="com.jd.ecc.b2b.mall.center.service.client.MallAdvertiseCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="favItemService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.FavItemService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="favShopService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.FavShopService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="mallDomainInfoCenterService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.MallDomainInfoCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--&lt;!&ndash;基础设施&ndash;&gt;-->
+  <!--<jsf:consumer id="jssService" retries="1" interface="com.jd.ecc.b2b.jss.center.service.client.JssService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--<jsf:consumer id="smsService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.SmsService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--<jsf:consumer id="redisService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.RedisService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--<jsf:consumer id="imgService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.ImgService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--<jsf:consumer id="flowService" retries="-1" interface="com.jd.ecc.b2b.base.center.service.client.FlowService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--<jsf:consumer id="propertiesService" retries="-1" interface="com.jd.ecc.b2b.base.center.service.client.PropertiesService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--&lt;!&ndash;用户中心&ndash;&gt;-->
+  <!--<jsf:consumer id="userService"  retries="1" interface="com.jd.ecc.b2b.user.center.client.service.UserService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="buyerService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.BuyerService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="sellerService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.SellerService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="userAuditService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.UserAuditService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="userCategoryService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.UserService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="userModifyInfoService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.UserService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="fieldCertificationService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.FieldCertificationService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--<jsf:consumer id="buyerCompanyInfoOfKYService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.BuyerCompanyInfoOfKYService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--&lt;!&ndash; 地址库服务 &ndash;&gt;-->
+  <!--<jsf:consumer id="addressBaseService" retries="1" interface="com.jd.ecc.b2b.delivery.service.AddressBaseService" protocol="jsf" timeout="${ecc.b2b.base.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.base.saf.group}:${ecc.b2b.base.saf.version}"/>-->
+  <!--&lt;!&ndash;商品中心相关接口&ndash;&gt;-->
+  <!--<jsf:consumer id="itemService" retries="1" interface="com.jd.ecc.b2b.item.client.service.ItemCenterService" protocol="jsf" timeout="${ecc.b2b.item.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}"/>-->
+  <!--<jsf:consumer id="itemInfoCenterService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.innerservice.ItemInfoCenterService" protocol="jsf" timeout="${ecc.b2b.item.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}"/>-->
+  <!--<jsf:consumer id="categoryAttrCenterService" retries="1" interface="com.jd.ecc.b2b.category.client.service.PlatformCategoryAttrCenterService" protocol="jsf" timeout="${ecc.b2b.item.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}"/>-->
+  <!--<jsf:consumer id="categoryCenterService" retries="1" interface="com.jd.ecc.b2b.category.client.service.PlatformCategoryCenterService" protocol="jsf" timeout="${ecc.b2b.item.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}"/>-->
+  <!--<jsf:consumer id="quoteInfoService" retries="1" interface="com.jd.ecc.b2b.item.client.service.QuoteInfoService" protocol="jsf" timeout="${ecc.b2b.item.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}"/>-->
+  <!--&lt;!&ndash;店铺中心接口&ndash;&gt;-->
+  <!--<jsf:consumer id="shopServiceForOpen" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopCustomerServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopCustomerServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopFareServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopFareServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopRuleServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopRuleServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopAddressServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopAddressServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopBrandServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopBrandServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopDomainMapperServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopDomainMapperServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="buyerCreditService" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.credit.BuyerCreditService" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopCreditAccountService" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.credit.ShopCreditAccountService" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopUserCreditCheckBatchService" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.credit.ShopUserCreditCheckBatchService" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="shopInfoExtendsServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.shopinfo.ShopInfoExtendsServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+
+  <!--&lt;!&ndash;订单中心接口&ndash;&gt;-->
+  <!--<jsf:consumer id="orderUserService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.order.service.OrderUserService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--<jsf:consumer id="skuPriceService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.price.service.SkuPriceService" protocol="jsf" timeout="${ecc.b2b.item.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--<jsf:consumer id="skuInventoryService" interface="com.jd.ecc.b2b.trade.center.client.inventory.service.SkuInventoryService" timeout="${ecc.b2b.trade.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--<jsf:consumer id="promotionFullReductionService" interface="com.jd.ecc.b2b.trade.center.client.promotion.service.PromotionFullReductionService" timeout="${ecc.b2b.trade.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--<jsf:consumer id="promotionMarkdownService" interface="com.jd.ecc.b2b.trade.center.client.promotion.service.PromotionMarkdownService" timeout="${ecc.b2b.trade.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--<jsf:consumer id="purchaseCenterService" interface="com.jd.ecc.b2b.item.client.service.PurchaseCenterService" timeout="${ecc.b2b.trade.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+
+
+  <!--&lt;!&ndash;delivery中心接口&ndash;&gt;-->
+  <!--<jsf:consumer id="usefulAddressInfoService" retries="1" interface="com.jd.ecc.b2b.delivery.service.UsefulAddressInfoService" protocol="jsf" timeout="${ecc.b2b.delivery.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.delivery.saf.group}:${ecc.b2b.delivery.saf.version}"/>-->
+  <!--<jsf:consumer id="deliveryRangeServiceForOpen" retries="1" interface="com.jd.ecc.b2b.delivery.service.DeliveryRangeServiceForOpen" protocol="jsf" timeout="${ecc.b2b.delivery.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.delivery.saf.group}:${ecc.b2b.delivery.saf.version}"/>-->
+  <!--&lt;!&ndash;购物车&ndash;&gt;-->
+  <!--<jsf:consumer id="cartSafService" retries="-1" interface="com.jd.ecc.b2b.trade.center.client.trade.service.CartService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+  <!--<jsf:consumer id="tradeSafService" retries="-1" interface="com.jd.ecc.b2b.trade.center.client.trade.service.TradeService" protocol="jsf" timeout="200000" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--
+  <jsf:consumer id="shopInfoServiceForOpen" retries="-1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopInfoServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>
+  -->
+  <!--<!&ndash;中信支付&ndash;>-->
+  <!--<saf:reference id="accountService" interface="com.jd.jfc.payment.client.AccountService"-->
+  <!--version="${ecc.b2b.zxbank.saf.version}" group="${ecc.b2b.zxbank.saf.group}"-->
+  <!--<saf:reference id="paymentService" interface="com.jd.jfc.payment.client.PaymentService"-->
+  <!--todo 此处涉及中信银行，将此处注释掉-->
+  <!--version="${ecc.b2b.zxbank.saf.version}" group="${ecc.b2b.zxbank.saf.group}"-->
+  <!--<saf:reference id="queryService" interface="com.jd.jfc.payment.client.QueryService"-->
+  <!--version="${ecc.b2b.zxbank.saf.version}" group="${ecc.b2b.zxbank.saf.group}"-->
+  <!--结算-->
+  <!--<jsf:consumer id="settlementDetailService" interface="com.jd.ecc.b2b.settlement.center.client.service.SettlementDetailService" protocol="jsf" timeout="5000" check="false" lazy="true" alias="${ecc.b2b.settlement.saf.group}:${ecc.b2b.settlement.saf.version}" retries="2"/>-->
+  <!--&lt;!&ndash; 平台中心活动服务  &ndash;&gt;-->
+  <!--<jsf:consumer id="platformActivityService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.activity.service.PlatformActivityService" protocol="jsf" timeout="${ecc.b2b.activity.saf.timeout}" loadbalance="random" check="false" lazy="true" alias="${ecc.b2b.activity.saf.group}:${ecc.b2b.activity.saf.version}"/>-->
+  <!--&lt;!&ndash;帮助中心&ndash;&gt;-->
+  <!--<jsf:consumer id="platformHelperService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.helper.service.PlatformHelperService" protocol="jsf" timeout="${ecc.b2b.activity.saf.timeout}" loadbalance="random" check="false" lazy="true" alias="${ecc.b2b.activity.saf.group}:${ecc.b2b.activity.saf.version}"/>-->
+  <!--&lt;!&ndash;评论中心&ndash;&gt;-->
+  <!--<jsf:consumer id="commentBuyerToGoodsService" interface="com.jd.ecc.b2b.comment.center.client.service.CommentBuyerToGoodsService" timeout="${ecc.b2b.comment.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.comment.saf.group}:${ecc.b2b.comment.saf.version}"/>-->
+  <!--<jsf:consumer id="commentBuyerToShopService" interface="com.jd.ecc.b2b.comment.center.client.service.CommentBuyerToShopService" timeout="${ecc.b2b.comment.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.comment.saf.group}:${ecc.b2b.comment.saf.version}"/>-->
+  <!--<jsf:consumer id="commentReplyService" interface="com.jd.ecc.b2b.comment.center.client.service.CommentReplyService" timeout="${ecc.b2b.comment.saf.timeout}" retries="0" protocol="jsf" check="false" lazy="true" alias="${ecc.b2b.comment.saf.group}:${ecc.b2b.comment.saf.version}"/>-->
+  <!--&lt;!&ndash; 平台服务规则 接口 &ndash;&gt;-->
+  <!--<jsf:consumer id="serviceRuleService" interface="com.jd.ecc.b2b.platform.center.client.serviceRule.service.ServiceRuleService" timeout="${ecc.b2b.serviceRule.saf.timeout}" protocol="jsf" loadbalance="random" lazy="true" check="false" alias="${saf.serviceRule.group}:${saf.serviceRule.version}" retries="2"/>-->
+  <!--&lt;!&ndash; 站内信 &ndash;&gt;-->
+  <!--<jsf:consumer id="webSiteMessageService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.WebSiteMessageService" protocol="jsf" timeout="${smsService.saf.timeout}" lazy="true" check="false" alias="${smsService.saf.group}:${smsService.saf.version}"/>-->
+  <!--&lt;!&ndash; 子账户 &ndash;&gt;-->
+  <!--<jsf:consumer id="userPermissionService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.UserPermissionService" protocol="jsf" timeout="${ecc.b2b.user.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.user.saf.group}:${ecc.b2b.user.saf.version}"/>-->
+  <!--&lt;!&ndash; 结算转账接口 modified by wangmengxiao at 20151120 &ndash;&gt;-->
+  <!--&lt;!&ndash;  <saf:reference  id="b2BPaymentService"  retries="1"  interface="com.jd.ecc.b2b.payment.client.service.B2BPaymentService"-->
+                    <!--group="${ecc.b2b.base.saf.group}"   version="${ecc.b2b.base.saf.version}"  timeout="70000"-->
+                    <!--protocol="dubbo"  lazy="true" check="false"/>&ndash;&gt;-->
+  <!--&lt;!&ndash; 结算转账接口 &ndash;&gt;-->
+  <!--<jsf:consumer id="settlementOperatorService" interface="com.jd.ecc.b2b.settlement.center.client.service.SettlementOperatorService" protocol="jsf" timeout="${ecc.b2b.settlement.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.settlement.saf.group}:${ecc.b2b.settlement.saf.version}" retries="2"/>-->
+  <!--&lt;!&ndash;settlementService&ndash;&gt;-->
+  <!--<jsf:consumer id="settlementService" retries="1" interface="com.jd.ecc.b2b.settlement.center.client.service.SettlementService" timeout="${ecc.b2b.settlement.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.settlement.saf.group}:${ecc.b2b.settlement.saf.version}"/>-->
+
+  <!--<jsf:consumer id="couponCenterService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.coupon.service.CouponCenterService" timeout="${ecc.b2b.trade.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+
+  <!--<jsf:consumer id="couponUseCenterService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.coupon.service.CouponUseCenterService" timeout="${ecc.b2b.trade.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+
+  <!--<jsf:consumer id="couponRuleCenterService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.coupon.service.CouponRuleCenterService" timeout="${ecc.b2b.trade.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+
+  <!--<jsf:consumer id="shopCategoryForOpen" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopCategoryForOpen" timeout="${ecc.b2b.shop.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}"/>-->
+
+
+<!--&lt;!&ndash;新增   李秀梅 根据地区获取运费数据&ndash;&gt;-->
+  <!--<jsf:consumer id="feeInfoService" retries="2" interface="com.jd.ecc.b2b.delivery.service.FeeInfoService"  protocol="jsf" timeout="${ecc.b2b.delivery.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.delivery.saf.group}:${ecc.b2b.delivery.saf.version}"/>-->
+
+  <!--&lt;!&ndash;浏览轨迹&ndash;&gt;-->
+  <!--<jsf:consumer id="mallUserVisitTrackService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.MallUserVisitTrackService" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--&lt;!&ndash;会员管理&ndash;&gt;-->
+  <!--<jsf:consumer id="shopMemberRuleService" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.member.ShopMemberRuleService" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--<jsf:consumer id="shopMemberGroupPriceServiceForOpen" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.member.ShopMemberGroupPriceServiceForOpen" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--&lt;!&ndash; 支付方式服务 &ndash;&gt;-->
+  <!--<jsf:consumer id="paymentTypeService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.payment.service.PaymentTypeService" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash; 支付方式服务 &ndash;&gt;-->
+  <!--<jsf:consumer id="paymentTypeAttributeService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.payment.service.PaymentTypeAttributeService" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash;solr&ndash;&gt;-->
+  <!--<jsf:consumer id="providerBaseSolrService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.provider.service.ProviderBaseSolrService" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+
+  <!--<jsf:consumer id="caService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.CAService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash; 支付交易服务 &ndash;&gt;-->
+  <!--<jsf:consumer id="paymentDealCenterServiceForOpen" retries="1" interface="com.jd.ecc.b2b.settlement.center.client.service.payment.PaymentDealCenterServiceForOpen" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+
+  <!--&lt;!&ndash; 支付流水信息服务 &ndash;&gt;-->
+  <!--<jsf:consumer id="paymentDetailCenterServiceForOpen" retries="1" interface="com.jd.ecc.b2b.settlement.center.client.service.payment.PaymentDetailCenterServiceForOpen" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--<jsf:consumer id="outTradeQueryService" retries="1" interface="com.jd.ecc.b2b.payment.client.service.OutTradeQueryService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+
+  <!--<jsf:consumer id="doProcessPaySuccessCenterService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.DoProcessPaySuccessCenterService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+
+  <!--<jsf:consumer id="b2BBuyerPaymentService" retries="1" interface="com.jd.ecc.b2b.payment.client.service.B2BBuyerPaymentService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+
+  <!--&lt;!&ndash;团购&ndash;&gt;-->
+  <!--<jsf:consumer id="grouponRuleService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.groupon.service.GrouponRuleService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--<jsf:consumer id="grouponService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.groupon.service.GrouponService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--&lt;!&ndash;特供商品权限管理&ndash;&gt;-->
+  <!--<jsf:consumer id="shopItemSpecialRuleServiceForOpen" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.special.ShopItemSpecialRuleServiceForOpen" timeout="${ecc.b2b.mall.saf.timeout}" protocol="jsf" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+
+  <!--&lt;!&ndash;用户反馈&ndash;&gt;-->
+  <!--<jsf:consumer id="mallUserFeedbackService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.businessManage.service.MallUserFeedbackService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+  <!--&lt;!&ndash; 支付宝接口 &ndash;&gt;-->
+  <!--<jsf:consumer id="aliPaymentService" retries="1" interface="com.jd.ecc.b2b.payment.client.service.alipayment.AliPaymentService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+  <!--&lt;!&ndash;移动商城&ndash;&gt;-->
+  <!--<jsf:consumer id="mobilePageConfigService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.mobiledecoration.service.MobilePageConfigService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+  <!--&lt;!&ndash;手机版本&ndash;&gt;-->
+  <!--<jsf:consumer id="mobileVersionService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.mobileversion.service.MobileVersionService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+  <!--&lt;!&ndash; 商城装修菜单 &ndash;&gt;-->
+  <!--<jsf:consumer id="mallNavigaioService" retries="1" interface="com.jd.ecc.decoration.center.client.service.publish.MallNavigaioService" protocol="jsf" timeout="${zx.saf.timeout}" lazy="true" check="false" alias="${zx.saf.group}:${zx.saf.version}" />-->
+
+  <!--&lt;!&ndash;店铺销售模板&ndash;&gt;-->
+  <!--<jsf:consumer id="ShopSaleTemplateServiceForOpen" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.saletemplate.ShopSaleTemplateServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+
+  <!--&lt;!&ndash;黑名单&ndash;&gt;-->
+  <!--<jsf:consumer id="platformBlackUserService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.blackUser.PlatformBlackUserService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}"/>-->
+  <!--&lt;!&ndash; 他人代付 &ndash;&gt;-->
+  <!--<jsf:consumer id="tradeInsteadPaymentServiceForOpen" retries="1" interface="com.jd.ecc.b2b.trade.center.client.trade.service.TradeInsteadPaymentServiceForOpen" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}"/>-->
+
+  <!--&lt;!&ndash;增值税发票&ndash;&gt;-->
+  <!--<jsf:consumer id="vatInvoiceServiceForOpen" retries="1" interface="com.jd.ecc.b2b.trade.center.client.invoice.service.VatInvoiceServiceForOpen" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+  <!--&lt;!&ndash;订单增值税发票&ndash;&gt;-->
+  <!--<jsf:consumer id="tradeInvoiceServiceForOpen" retries="1" interface="com.jd.ecc.b2b.trade.center.client.invoice.service.TradeInvoiceServiceForOpen" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+
+  <!--&lt;!&ndash;平台客服&ndash;&gt;-->
+  <!--<jsf:consumer id="platformCustomerService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.customer.PlatformCustomerService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+  <!--&lt;!&ndash;定制商品sku&ndash;&gt;-->
+  <!--<jsf:consumer id="itemCustomizedSkuServiceForOpen" retries="1" interface="com.jd.ecc.b2b.item.client.service.ItemCustomizedSkuServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+  <!--&lt;!&ndash;定制商品购买配置服务&ndash;&gt;-->
+  <!--<jsf:consumer id="customizedPayConfigServiceForOpen" retries="1" interface="com.jd.ecc.b2b.item.client.service.CustomizedPayConfigServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+  <!--&lt;!&ndash;定制商品公式服务&ndash;&gt;-->
+  <!--<jsf:consumer id="itemAttrFormulaService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.itemAttrFormula.service.ItemAttrFormulaService" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+
+  <!--&lt;!&ndash;定制订单服务&ndash;&gt;-->
+  <!--<jsf:consumer id="customizedOrderService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.customized.service.CustomizedOrderService" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+  <!--&lt;!&ndash;定制包装服务&ndash;&gt;-->
+  <!--<jsf:consumer id="designPatternService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.customized.service.DesignPatternService" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+  <!--&lt;!&ndash;定制商品区域折扣服务&ndash;&gt;-->
+  <!--<jsf:consumer id="customizedDiscountServiceForOpen" retries="1" interface="com.jd.ecc.b2b.trade.center.client.customized.service.CustomizedDiscountServiceForOpen" protocol="jsf" timeout="${ecc.b2b.shop.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.shop.saf.group}:${ecc.b2b.shop.saf.version}" />-->
+
+  <!--&lt;!&ndash;热词&ndash;&gt;-->
+  <!--<jsf:consumer id="platformHotwordServiceForOpen" retries="1" interface="com.jd.ecc.b2b.platform.center.client.hotword.service.PlatformHotwordServiceForOpen" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+  <!--&lt;!&ndash;商品搜索服务&ndash;&gt;-->
+  <!--<jsf:consumer id="itemBaseSolrService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.itemsolr.service.ItemBaseSolrService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash;采购单搜索服务&ndash;&gt;-->
+  <!--<jsf:consumer id="purchaseInfoSolrService" retries="1" interface="com.jd.ecc.b2b.mall.center.service.client.purchase.service.PurchaseInfoSolrService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+
+  <!--&lt;!&ndash;多版本&ndash;&gt;-->
+  <!--<jsf:consumer id="platformFuncService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.PlatformFuncService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+  <!--<jsf:consumer id="platformEditionService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.PlatformEditionService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash;前台类目服务&ndash;&gt;-->
+  <!--<jsf:consumer id="platformFrontCategoryServiceForOpen" retries="1" interface="com.jd.ecc.b2b.category.client.service.PlatformFrontCategoryServiceForOpen" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash;前台类目与基础类目映射关系服务&ndash;&gt;-->
+  <!--<jsf:consumer id="platformFrontCategoryMappingServiceForOpen" retries="1" interface="com.jd.ecc.b2b.category.client.service.PlatformFrontCategoryMappingServiceForOpen" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+  <!--&lt;!&ndash;定制页面接口&ndash;&gt;-->
+  <!--<jsf:consumer id="customizedPageService" retries="1" interface="com.jd.ecc.b2b.base.center.service.client.CustomizedPageService" protocol="jsf" timeout="${ecc.b2b.mall.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.mall.saf.group}:${ecc.b2b.mall.saf.version}" />-->
+
+  <!--&lt;!&ndash;买家 个人、企业认证服务&ndash;&gt;-->
+  <!--<jsf:consumer id="buyerSpecialService" retries="1" interface="com.jd.ecc.b2b.user.center.client.authenticate.service.BuyerSpecialService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+  <!--<jsf:consumer id="buyerSpecialUserService" retries="1" interface="com.jd.ecc.b2b.user.center.client.authenticate.service.BuyerSpecialUserService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+  <!--&lt;!&ndash;用户资质验证&ndash;&gt;-->
+  <!--<jsf:consumer id="userAuthService" retries="1" interface="com.jd.ecc.b2b.user.center.client.service.UserAuthService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.trade.saf.group}:${ecc.b2b.trade.saf.version}" />-->
+
+  <!--<jsf:consumer id="itemDeliveryInfoService" retries="1" interface="com.jd.ecc.b2b.item.client.service.ItemDeliveryInfoService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}" />-->
+
+  <!--&lt;!&ndash;平台促销&ndash;&gt;-->
+  <!--<jsf:consumer id="promotionPlatformService" retries="1" interface="com.jd.ecc.b2b.platform.center.client.promotion.service.PromotionPlatformService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}" />-->
+
+  <!--&lt;!&ndash;平台促销&ndash;&gt;-->
+  <!--<jsf:consumer id="shopInfoServiceForOpen" retries="1" interface="com.jd.ecc.b2b.shop.center.client.service.ShopInfoServiceForOpen" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}" />-->
+
+  <!--&lt;!&ndash;平台促销&ndash;&gt;-->
+  <!--<jsf:consumer id="orderItemPriceHistoryService" retries="1" interface="com.jd.ecc.b2b.trade.center.client.order.service.OrderItemPriceHistoryService" protocol="jsf" timeout="${ecc.b2b.trade.saf.timeout}" lazy="true" check="false" alias="${ecc.b2b.item.saf.group}:${ecc.b2b.item.saf.version}" />-->
+
+</beans>

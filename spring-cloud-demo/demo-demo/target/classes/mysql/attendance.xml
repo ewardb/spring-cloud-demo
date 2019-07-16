@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.demo.demo.dao.AttendanceMapper">
+
+    <sql id="TABLE"><![CDATA[ attendance]]></sql>
+    <sql id="QUERY_COLUMN_LIST">
+        <![CDATA[
+                id AS id,
+                user_id AS userId,
+                open_time AS openTime,
+                close_time AS closeTime,
+                yn AS yn
+            ]]>
+    </sql>
+
+    <!-- all condition -->
+    <sql id="QUERY_WHERE">
+        <where>
+            yn=1
+            <if test="id != null"><![CDATA[AND id = #{id}]]></if>
+            <if test="userId != null"><![CDATA[AND user_id = #{userId}]]></if>
+            <if test="openTime != null"><![CDATA[AND open_time = #{openTime}]]></if>
+            <if test="closeTime != null and closeTime !=''"><![CDATA[AND close_time = #{closeTime}]]></if>
+            <if test="yn != null"><![CDATA[AND yn = #{yn}]]></if>
+        </where>
+    </sql>
+
+    <insert id="insert" parameterType="spring.demo.demo.domain.Attendance" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        <include refid="TABLE"/>
+        (
+        user_id,
+        open_time,
+        close_time,
+        yn
+        )VALUES(
+        #{userId},
+        now(),
+        #{closeTime},
+        1
+        )
+    </insert>
+
+
+</mapper>

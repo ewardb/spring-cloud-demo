@@ -16,6 +16,8 @@ public class SCApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(SCApplication.class, args);
+        System.out.println("aaaa");
+        System.out.println("fdfdfafasfadsfdasfadsf");
     }
 
 //    @Override
